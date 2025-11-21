@@ -40,9 +40,9 @@ module.exports = {
         cloudinaryId: result.public_id,
         caption: req.body.caption,
         likes: 0,
-        user: req.user._id,
+        user: req.user
       });
-      console.log(req.user, req.user._id) //find the user id, then add to post schema
+      console.log('from controllers posts.js', req.user) //find the user id, then add to post schema
       res.redirect("/profile");
     } catch (err) {
       console.log(err);
