@@ -1,34 +1,102 @@
 const mongoose = require("mongoose");
 
 const PostSchema = new mongoose.Schema({
-  title: {
+  submittedBy: {
     type: String,
-    required: true,
+    required: true
   },
-  image: {
-    type: String,
-    require: true,
+
+  admin: {
+    incidentNumbers: {
+      group: { type: String },
+      battalion: { type: String },
+      company: { type: String }
+    },
+    personnel: {
+      teamLeader: { type: String },
+      dutyOfficer: { type: String },
+      teamMember1: { type: String },
+      teamMember2: { type: String },
+      teamMember3: { type: String }
+    }
   },
-  cloudinaryId: {
-    type: String,
-    require: true,
+
+  start: {
+    startTime: { type: String },
+    dateCallRecieved: { type: String },
+
+    rank: { type: String },
+    leoFirstName: { type: String },
+    leoLastName: { type: String },
+    leoCell: { type: String },
+
+    itemDescription: { type: String },
+    explosives: { type: String },
+
+    departTime: { type: String },
+    departDate: { type: String },
+    truckDepartMiles: { type: String },
+
+    image: { type: String },
+    cloudinaryId: { type: String }
   },
-  caption: {
-    type: String,
-    required: true,
+
+  arrival: {
+    arrivalTime: { type: String },
+    arrivalDate: { type: String },
+    onSceneSafeArea: { type: String },
+
+    onSceneCommander: {
+      //rank: { type: String },
+      firstName: { type: String },
+      lastName: { type: String },
+      phoneNumber: { type: String },
+      officeNumber: { type: String },
+      email: { type: String }
+    },
+
+    actualItems: { type: String },
+    itemGrid: { type: String },
+    rspProcedures: { type: String }
   },
-  likes: {
-    type: Number,
-    required: true,
+
+  departScene: {
+    departSceneTime: { type: String },
+    departSceneDate: { type: String },
+    departSceneGrid: { type: String }
   },
+
+  detonation: {
+    detonationTime: { type: String },
+    detonationDate: { type: String },
+    detonationGrid: { type: String },
+    disposalProcedures: { type: String },
+    explosivesUsed: { type: String }
+  },
+
+  fiveWs: {
+    who: { type: String },
+    what: { type: String },
+    where: { type: String },
+    when: { type: String },
+    why: { type: String }
+  },
+
+  missionComplete: {
+    truckEndMiles: { type: String },
+    mcTime: { type: String },
+    mcDate: { type: String }
+  },
+
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
+    ref: "User"
   },
+
   createdAt: {
     type: Date,
-    default: Date.now,
-  },
+    default: Date.now
+  }
 });
 
 module.exports = mongoose.model("Post", PostSchema);
