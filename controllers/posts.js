@@ -37,6 +37,7 @@ module.exports = {
 
       await Post.create({
         submittedBy: req.user,
+        user: req.user.id,
 
         admin: {
           incidentNumbers: {
@@ -77,7 +78,10 @@ module.exports = {
         arrival: {
           arrivalTime: req.body.arrivalTime,
           arrivalDate: req.body.arrivalDate,
-          onSceneSafeArea: req.body.onSceneSafeArea,
+          // onSceneSafeArea: req.body.onSceneSafeArea,
+          onSceneLat: req.body.onSceneLat,
+          onSceneLong: req.body.onSceneLong,
+
 
           onSceneCommander: {
             rank: req.body.oscRank,
@@ -89,14 +93,18 @@ module.exports = {
           },
 
           actualItems: req.body.actualItems,
-          itemGrid: req.body.itemGrid,
+          // itemGrid: req.body.itemGrid,
+          itemLat: req.body.itemLat,
+          itemLong: req.body.itemLong,
           rspProcedures: req.body.rspProcedures
         },
 
         departScene: {
           departSceneTime: req.body.departSceneTime,
           departSceneDate: req.body.departSceneDate,
-          departSceneGrid: req.body.departSceneGrid
+          // departSceneGrid: req.body.departSceneGrid
+          detonationLat: req.body.detonationLat,
+          detonationLong: req.body.detonationLong
         },
 
         detonation: {
@@ -120,8 +128,6 @@ module.exports = {
           mcTime: req.body.mcTime,
           mcDate: req.body.mcDate
         },
-
-        user: req.user.id
 
         // createdAt is prefilled by date.now in schema
       });

@@ -5,6 +5,10 @@ const PostSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+    user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User"
+  },
 
   admin: {
     incidentNumbers: {
@@ -47,7 +51,7 @@ const PostSchema = new mongoose.Schema({
     onSceneSafeArea: { type: String },
 
     onSceneCommander: {
-      //rank: { type: String },
+      rank: { type: String },
       firstName: { type: String },
       lastName: { type: String },
       phoneNumber: { type: String },
@@ -56,20 +60,26 @@ const PostSchema = new mongoose.Schema({
     },
 
     actualItems: { type: String },
-    itemGrid: { type: String },
+    //itemGrid: { type: String },
+    itemLat: { type: Number },
+    itemLong: { type: Number },
     rspProcedures: { type: String }
   },
 
   departScene: {
     departSceneTime: { type: String },
     departSceneDate: { type: String },
-    departSceneGrid: { type: String }
+    // departSceneGrid: { type: String }
+    departSceneLat: { type: String },
+    departSceneLong: { type: String }
   },
 
   detonation: {
     detonationTime: { type: String },
     detonationDate: { type: String },
-    detonationGrid: { type: String },
+    //detonationGrid: { type: String },
+    detonationLat: { type: String },
+    detonationLong: { type: String },
     disposalProcedures: { type: String },
     explosivesUsed: { type: String }
   },
@@ -86,11 +96,6 @@ const PostSchema = new mongoose.Schema({
     truckEndMiles: { type: String },
     mcTime: { type: String },
     mcDate: { type: String }
-  },
-
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User"
   },
 
   createdAt: {
