@@ -1,4 +1,4 @@
-# First Responder Incident Management System (FRIMS)
+# First Responder Incident Management (FRIM)
 
 A full-stack Node.js and Express web application that enables first responders to document, track, and manage incident response data efficiently. Users can log key details of each incident phase, visualize incidents on an interactive map, and store all entries securely using MongoDB.
 
@@ -15,8 +15,8 @@ A full-stack Node.js and Express web application that enables first responders t
 
 ## Project Overview
 
-The First Responder Incident Management System (FRIMS) streamlines the process of documenting and managing incident response activities for fire, police, EMS, explosives operations.
-Built on Node.js, Express, and MongoDB, FRIMS allows users to create structured incident records (including call time, contact details, item description, explosives used, and travel data), then visualize them on a Leaflet map.
+The First Responder Incident Management (FRIM) streamlines the process of documenting and managing incident response activities for fire, police, EMS, explosives operations.
+Built on Node.js, Express, and MongoDB, FRIM allows users to create structured incident records (including call time, contact details, item description, explosives used, and travel data), then visualize them on a Leaflet map.
 This system serves as an integrated reporting and situational awareness tool for field teams and command elements.
 
 ## Features
@@ -42,13 +42,13 @@ This system serves as an integrated reporting and situational awareness tool for
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/first-responder-site.git
+git clone https://github.com/yourusername/binary-upload-boom.git
 ````
 
 2. Navigate to the project directory:
 
 ```bash
-cd first-responder-site
+cd binary-upload-boom
 ```
 
 3. Install Dependencies:
