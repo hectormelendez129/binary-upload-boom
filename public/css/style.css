@@ -32,3 +32,8 @@
      color: #fff;
      border-color: #157347;
  }
+
+#width400{
+    width: 75%;
+    height: auto;
+}

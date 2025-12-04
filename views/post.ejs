@@ -6,14 +6,14 @@
       <h2>Company Incident: <%= post.admin.incidentNumbers.company %></h2>
       <img class="img-fluid" src="<%= post.start?.image%>" />
       <div class="row justify-content-between">
-        <form
+        <!-- <form
           class="col-1"
           action="/post/likePost/<%= post.id %>?_method=PUT"
           method="POST"
         >
           <button class="btn btn-primary fa fa-heart" type="submit"></button>
         </form>
-        <h3 class="col-3">Likes: <%= post.likes %></h3>
+        <h3 class="col-3">Likes: <%= post.likes %></h3> -->
         <% console.log( 'from post.ejs: user = ', user, 'post.submittedBy:', post?.submittedBy ) %>
         <%if( user == post?.submittedBy ){ %> <!--trash can for original poster-->
           
